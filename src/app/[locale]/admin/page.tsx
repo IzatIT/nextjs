@@ -1,4 +1,3 @@
-import withAuth from "@/utils/with-auth"
 
 function AdminPage() {
     return (
@@ -8,4 +7,4 @@ function AdminPage() {
     )
 }
 
-export default withAuth(AdminPage)
+export default AdminPage

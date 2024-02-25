@@ -12,6 +12,7 @@ const baseQuery = fetchBaseQuery({
         return headers
     }
 })
+
 const baseQueryWithReauth: BaseQueryFn<
     string | FetchArgs,
     unknown,

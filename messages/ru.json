@@ -1,5 +1,18 @@
 {
   "titles": {
     "main": "Главная"
+  },
+  "notify": {
+    "file-rejected": "Неправильный формат файла!",
+    "image-rejected": "Неправильный формат фотографии!",
+    "accepted": "Сохранено!"
+  },
+  "actions": {
+    "attach-file": "Выберите файлы",
+    "attach-image": "Выберите фотографии"
+  },
+  "descriptions": {
+    "files": "PDF, Word, Excel, Power Point",
+    "images": "Форматы: .png, .jpg, .svg, .jpeg, .webp"
   }
 }

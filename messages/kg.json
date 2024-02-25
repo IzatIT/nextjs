@@ -1,5 +1,18 @@
 {
   "titles": {
     "main": "Башкы баракча"
+  },
+  "notify": {
+    "file-rejected": "Туура эмес форматтагы файл!",
+    "image-rejected": "Туура эмес форматтагы сурот!",
+    "accepted": "Сурот сакталды!"
+  },
+  "actions": {
+    "attach-file": "Файлдарды жуктонуз",
+    "attach-image": "Суротту жуктонуз"
+  },
+  "descriptions": {
+    "files": "PDF, Word, Excel, Power Point",
+    "images": "Форматтар: .png, .jpg, .svg, .jpeg, .webp"
   }
 }

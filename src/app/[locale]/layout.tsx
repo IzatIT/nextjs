@@ -1,6 +1,8 @@
 import { useMessages } from "next-intl";
 import Providers from "./provider";
 import "@/styles/globals.scss"
+import { Suspense } from "react";
+import Loading from "./loading";
 
 interface Props {
   children: React.ReactNode;
@@ -17,7 +19,9 @@ export default function RootLayout({
     <html lang={locale}>
       <body>
         <Providers messages={messages}>
-          {children}
+          <Suspense fallback={<Loading />}>
+            {children}
+          </Suspense>
         </Providers>
       </body>
     </html>

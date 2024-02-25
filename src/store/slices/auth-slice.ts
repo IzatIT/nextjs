@@ -1,11 +1,9 @@
 "use client"
 import { createSlice } from "@reduxjs/toolkit";
-
 interface IInitialState {
     profile: null | IProfile;
     loggedIn: boolean;
 }
-
 
 const initialState: IInitialState = {
     profile: null,
