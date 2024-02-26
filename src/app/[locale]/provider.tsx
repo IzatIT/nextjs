@@ -12,7 +12,6 @@ import '@mantine/dropzone/styles.css';
 import '@mantine/code-highlight/styles.css';
 import '@mantine/nprogress/styles.css';
 import '@mantine/code-highlight/styles.css';
-require('dotenv').config({ path: './configs/.env' });
 interface Props {
     children: ReactNode;
     messages: AbstractIntlMessages;
