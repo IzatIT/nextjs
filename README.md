@@ -60,9 +60,10 @@ Next.js
 
    ```bash
    git clone <repository_url>
-  cd nextjs
-  npm install
-  npm run dev
+   cd nextjs
+   npm install
+   npm run dev
+    ```
 
 Открыть в браузере:
 Откройте http://localhost:3000 в вашем браузере, чтобы просмотреть проект.
