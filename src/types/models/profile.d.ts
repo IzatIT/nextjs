@@ -5,4 +5,6 @@ declare interface IProfile {
     role: RoleType;
     inn: string;
     organ: string;
+    accessToken: string;
+    refreshToken: string
 }

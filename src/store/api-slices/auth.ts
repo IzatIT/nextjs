@@ -11,7 +11,6 @@ const authSlice = api.injectEndpoints({
                 url: Path.Auth.login,
                 body
             }),
-            invalidatesTags: ["Auth"]
         }),
         register: builder.mutation({
             query: (body) => ({
@@ -25,12 +24,13 @@ const authSlice = api.injectEndpoints({
                 method: METHODS.GET,
                 url: Path.Auth.getMe(id),
             }),
-            providesTags: ["Auth"]
         })
     })
 })
 
 
 export const {
-
+    useAuthMutation,
+    useGetMeQuery,
+    useRegisterMutation
 } = authSlice

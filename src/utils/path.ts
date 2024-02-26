@@ -6,5 +6,6 @@ export class Path {
         static register = createUrl("register");
         static getMe = (id: number) => createUrl(`getme/${id}`);
         static refreshToken = createUrl("refreshToken")
+        static OtpVerification = createUrl("auth/verify-otp");
     }
 }

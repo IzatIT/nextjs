@@ -1,14 +1,19 @@
-import type { BaseQueryFn, FetchArgs, FetchBaseQueryError, } from '@reduxjs/toolkit/query'
-import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query'
+"use client"
+import type { BaseQueryFn, FetchArgs, FetchBaseQueryError, } from '@reduxjs/toolkit/query/react'
+import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 import { BASE_API, METHODS } from '@/constants'
 import { Path } from '@/utils'
 import { logIn, logOut } from './slices/auth-slice'
+import { useLocalStorage } from '@/hooks'
+
 
 const baseQuery = fetchBaseQuery({
     baseUrl: `${BASE_API}`,
-    prepareHeaders: (headers) => {
-        const token = ""
-        headers.set("authorization", `Bearer ${token}`);
+    prepareHeaders: (headers: Headers, { getState }) => {
+        const accessToken = ""
+        if (accessToken) {
+            headers.set("authorization", `Bearer ${accessToken}`);
+        }
         return headers
     }
 })
