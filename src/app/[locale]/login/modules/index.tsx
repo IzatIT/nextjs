@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation"
 import { useForm, yupResolver } from '@mantine/form';
 import { notify } from "@/utils"
 import { UseActions } from "@/hooks/use-actions"
-import { loginInitialValues, loginSchema } from "@/lib"
+import { getLoginForm } from "@/lib"
 
 export const LoginModule = () => {
     const t = useTranslations()
@@ -15,10 +15,10 @@ export const LoginModule = () => {
     const { logIn } = UseActions();
     const [login] = useLoginMutation();
 
-    const form = useForm<IAuthRequest>({
-        initialValues: loginInitialValues,
-        validate: yupResolver(loginSchema)
-    });
+    const form = useForm<IAuthRequest>(getLoginForm({
+        minSix: t("form.errors.minSix"),
+        required: t("form.error.required")
+    }));
 
     const handleSubmit = async (values: IAuthRequest) => {
         try {

@@ -1,13 +1,22 @@
+import { yupResolver } from '@mantine/form';
 import * as yup from 'yup';
 
-export const loginSchema = yup.object().shape({
-    password: yup.string().min(6, 'Name should have at least 6 letters'),
-    login: yup
-        .number()
-        .required('Invalid')
-});
+interface Args {
+    minSix: string;
+    required: string;
+}
 
-export const loginInitialValues: IAuthRequest = {
-    password: "",
-    login: ""
+export const getLoginForm = ({
+    minSix,
+    required,
+}: Args) => {
+    const loginSchema = yup.object().shape({
+        login: yup.string().required(required),
+        password: yup.string().min(6, minSix).required(required),
+    });
+    const initialValues: IAuthRequest = {
+        login: "",
+        password: "",
+    }
+    return { initialValues, validate: yupResolver(loginSchema) }
 }

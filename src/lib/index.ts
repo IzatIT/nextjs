@@ -1,4 +1,1 @@
-export {
-    loginInitialValues,
-    loginSchema
-} from './login-scheme'
+export { getLoginForm } from './login-scheme'
