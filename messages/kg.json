@@ -1,6 +1,8 @@
 {
   "titles": {
-    "main": "Башкы баракча"
+    "main": "Башкы баракча",
+    "login": "Авторизациялануу",
+    "admin": "Админ панелм"
   },
   "notify": {
     "file-rejected": "Туура эмес форматтагы файл!",
@@ -13,6 +15,19 @@
   },
   "descriptions": {
     "files": "PDF, Word, Excel, Power Point",
-    "images": "Форматтар: .png, .jpg, .svg, .jpeg, .webp"
+    "images": "Форматтар: .png, .jpg, .svg, .jpeg, .webp",
+    "main": "Башкы баракча",
+    "login": "Авторизациялануу",
+    "admin": "Админ панели"
+  },
+  "form": {
+    "label": {
+      "login": "Логин",
+      "password": "Сыр сөз"
+    }
+  },
+  "button": {
+    "login": "Кирүү",
+    "cancel": "Кайтуу"
   }
 }

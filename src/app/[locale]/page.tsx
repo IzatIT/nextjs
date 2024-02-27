@@ -6,7 +6,7 @@ import { Metadata } from "next";
 
 export async function generateMetadata({ params }: { params: LocaleType }): Promise<Metadata> {
   const t = await getTranslations({ locale: params.locale });
-  const metaData = generateMetaTags(t("title.main"), t("description.main"), "/")
+  const metaData = generateMetaTags(t("titles.main"), t("descriptions.main"), "/")
   return metaData
 }
 

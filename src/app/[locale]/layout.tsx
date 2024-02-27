@@ -1,9 +1,9 @@
 import { useMessages } from "next-intl";
 import Providers from "./provider";
-import "@/styles/globals.scss"
 import { Suspense } from "react";
 import Loading from "./loading";
-
+import "@/styles/globals.scss"
+import "@/styles/variables.scss"
 interface Props {
   children: React.ReactNode;
   params: { locale: string };

@@ -10,7 +10,7 @@ const initialState: IInitialState = {
     loggedIn: false
 }
 
-const authSlice = createSlice({
+export const authSlice = createSlice({
     name: "auth",
     initialState,
     reducers: {
@@ -26,4 +26,4 @@ const authSlice = createSlice({
 })
 
 export const { logIn, logOut } = authSlice.actions;
-export default authSlice.reducer
+export const authReducer = authSlice.reducer

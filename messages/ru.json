@@ -1,6 +1,8 @@
 {
   "titles": {
-    "main": "Главная"
+    "main": "Главная",
+    "login": "Авторизация",
+    "admin": "Админ панель"
   },
   "notify": {
     "file-rejected": "Неправильный формат файла!",
@@ -13,6 +15,18 @@
   },
   "descriptions": {
     "files": "PDF, Word, Excel, Power Point",
-    "images": "Форматы: .png, .jpg, .svg, .jpeg, .webp"
+    "images": "Форматы: .png, .jpg, .svg, .jpeg, .webp",
+    "login": "Авторизация",
+    "admin": "Админ панель"
+  },
+  "form": {
+    "label": {
+      "login": "Логин",
+      "password": "Пароль"
+    }
+  },
+  "button": {
+    "login": "Войти",
+    "cancel": "Назад"
   }
 }

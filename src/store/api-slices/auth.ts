@@ -1,36 +1,41 @@
-"use client"
-import { METHODS } from "@/constants";
-import { Path } from "@/utils";
 import { api } from "../api";
+import { Path } from "@/utils";
 
-const authSlice = api.injectEndpoints({
+export const authApiSlice = api.injectEndpoints({
     endpoints: (builder) => ({
-        auth: builder.mutation<IAuthResponse, IAuthRequest>({
-            query: (body) => ({
-                method: METHODS.POST,
-                url: Path.Auth.login,
-                body
+        login: builder.mutation({
+            query: (credentials) => ({
+                url: Path.Auth.signIn,
+                method: "POST",
+                body: { ...credentials },
             }),
         }),
-        register: builder.mutation({
-            query: (body) => ({
-                method: METHODS.POST,
-                url: Path.Auth.register,
-                body,
-            })
-        }),
-        getMe: builder.query({
-            query: (id) => ({
-                method: METHODS.GET,
-                url: Path.Auth.getMe(id),
+        logOut: builder.mutation({
+            query: () => ({
+                url: Path.Auth.signOut,
+                method: "POST",
             }),
-        })
-    })
-})
-
+        }),
+        registration: builder.mutation({
+            query: (data) => ({
+                url: Path.Auth.registrationAuth,
+                method: "POST",
+                body: { ...data },
+            }),
+        }),
+        otpVerification: builder.mutation({
+            query: (data) => ({
+                url: Path.Auth.OtpVerification,
+                method: "POST",
+                body: { ...data },
+            }),
+        }),
+    }),
+});
 
 export const {
-    useAuthMutation,
-    useGetMeQuery,
-    useRegisterMutation
-} = authSlice
+    useLoginMutation,
+    useLogOutMutation,
+    useRegistrationMutation,
+    useOtpVerificationMutation,
+} = authApiSlice;
